@@ -22,6 +22,7 @@
 		CF9E8FCB193A210D00934456 /* TestModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FCA193A210D00934456 /* TestModuleTests.m */; };
 		CF9E8FD7193A28A800934456 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8FD6193A28A800934456 /* FacebookSDK.framework */; };
 		CF9E8FDA193A343B00934456 /* KTFacebookPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */; };
+		CF9E8FE0193A4C5E00934456 /* KTCollectionViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FDF193A4C5E00934456 /* KTCollectionViewImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		CF9E8FD6193A28A800934456 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CF9E8FD8193A343B00934456 /* KTFacebookPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTFacebookPhotosViewController.h; sourceTree = "<group>"; };
 		CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTFacebookPhotosViewController.m; sourceTree = "<group>"; };
+		CF9E8FDE193A4C5E00934456 /* KTCollectionViewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCollectionViewImageCell.h; sourceTree = "<group>"; };
+		CF9E8FDF193A4C5E00934456 /* KTCollectionViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCollectionViewImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +171,18 @@
 		CF9E8FDC193A346600934456 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF9E8FDD193A4C3C00934456 /* Collection View Cells */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		CF9E8FDD193A4C3C00934456 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E8FDE193A4C5E00934456 /* KTCollectionViewImageCell.h */,
+				CF9E8FDF193A4C5E00934456 /* KTCollectionViewImageCell.m */,
+			);
+			name = "Collection View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +286,7 @@
 				CF9E8FA9193A210D00934456 /* main.m in Sources */,
 				CF9E8FDA193A343B00934456 /* KTFacebookPhotosViewController.m in Sources */,
 				CF9E8FAD193A210D00934456 /* KTAppDelegate.m in Sources */,
+				CF9E8FE0193A4C5E00934456 /* KTCollectionViewImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

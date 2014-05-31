@@ -34,11 +34,14 @@
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:
      @[@"public_profile", @"user_photos"]];
     loginView.delegate = self;
-    [loginView setCenter:self.view.center];
+    //[loginView setCenter:self.view.center];
     [self.view addSubview:loginView];
     
     _thumbnailImagesURLs = [[NSMutableArray alloc] init];
     _imagesURLs = [[NSMutableArray alloc] init];
+    
+    [_collectionView setDelegate:self];
+    [_collectionView setDataSource:self];
     
 }
 
@@ -47,9 +50,28 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - CollectionView Delegate methods
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"ImageCell";
+    UICollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+
+    return cell;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [_imagesURLs count];
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
 #pragma mark - FB SDK methods
 
 -(void)getUserPhotos{
+    _thumbnailImagesURLs = [[NSMutableArray alloc] init];
+    _imagesURLs = [[NSMutableArray alloc] init];
     [FBRequestConnection startWithGraphPath:@"/me/photos/uploaded" parameters:nil HTTPMethod:@"GET"
                           completionHandler:^(FBRequestConnection *connection, id result, NSError *error){
                               
@@ -61,6 +83,8 @@
                                   NSURL *imageURL = [NSURL URLWithString:[imageObj valueForKey:@"source"]];
                                   [_imagesURLs addObject:imageURL];
                               }];
+                              
+                              [_collectionView reloadData];
     }];
 }
 
@@ -71,7 +95,7 @@
 
 // Logged-in user
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    [self getUserPhotos];
+    //[self getUserPhotos];
 }
 
 // Logged-out user

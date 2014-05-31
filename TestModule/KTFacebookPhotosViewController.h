@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface KTFacebookPhotosViewController : UIViewController <FBLoginViewDelegate>
+@interface KTFacebookPhotosViewController : UIViewController <FBLoginViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIView *loginButtonView;
 
 @end
