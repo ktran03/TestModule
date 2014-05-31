@@ -7,6 +7,8 @@
 //
 
 #import "KTFacebookPhotosViewController.h"
+#import "UIImageView+WebCache.h"
+#import "KTCollectionViewImageCell.h"
 
 @interface KTFacebookPhotosViewController ()
 
@@ -54,8 +56,9 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"ImageCell";
-    UICollectionViewCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-
+    KTCollectionViewImageCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    NSURL *imageURL = [_thumbnailImagesURLs objectAtIndex:indexPath.row];
+    [cell.imageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
     return cell;
 }
 
