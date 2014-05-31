@@ -12,6 +12,7 @@
 @interface KTFacebookPhotosViewController : UIViewController <FBLoginViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UIView *loginButtonView;
+@property (weak, nonatomic) IBOutlet FBLoginView *fbLoginView;
+@property (weak, nonatomic) IBOutlet UILabel *helloLabel;
 
 @end
