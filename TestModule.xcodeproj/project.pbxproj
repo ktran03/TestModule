@@ -14,8 +14,6 @@
 		CF9E8FA9193A210D00934456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FA8193A210D00934456 /* main.m */; };
 		CF9E8FAD193A210D00934456 /* KTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FAC193A210D00934456 /* KTAppDelegate.m */; };
 		CF9E8FB0193A210D00934456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9E8FAE193A210D00934456 /* Main.storyboard */; };
-		CF9E8FB3193A210D00934456 /* KTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FB2193A210D00934456 /* KTFirstViewController.m */; };
-		CF9E8FB6193A210D00934456 /* KTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FB5193A210D00934456 /* KTSecondViewController.m */; };
 		CF9E8FB8193A210D00934456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9E8FB7193A210D00934456 /* Images.xcassets */; };
 		CF9E8FBF193A210D00934456 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8FBE193A210D00934456 /* XCTest.framework */; };
 		CF9E8FC0193A210D00934456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8F9C193A210D00934456 /* Foundation.framework */; };
@@ -23,6 +21,7 @@
 		CF9E8FC9193A210D00934456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF9E8FC7193A210D00934456 /* InfoPlist.strings */; };
 		CF9E8FCB193A210D00934456 /* TestModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FCA193A210D00934456 /* TestModuleTests.m */; };
 		CF9E8FD7193A28A800934456 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8FD6193A28A800934456 /* FacebookSDK.framework */; };
+		CF9E8FDA193A343B00934456 /* KTFacebookPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +46,6 @@
 		CF9E8FAB193A210D00934456 /* KTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTAppDelegate.h; sourceTree = "<group>"; };
 		CF9E8FAC193A210D00934456 /* KTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTAppDelegate.m; sourceTree = "<group>"; };
 		CF9E8FAF193A210D00934456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF9E8FB1193A210D00934456 /* KTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTFirstViewController.h; sourceTree = "<group>"; };
-		CF9E8FB2193A210D00934456 /* KTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTFirstViewController.m; sourceTree = "<group>"; };
-		CF9E8FB4193A210D00934456 /* KTSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTSecondViewController.h; sourceTree = "<group>"; };
-		CF9E8FB5193A210D00934456 /* KTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTSecondViewController.m; sourceTree = "<group>"; };
 		CF9E8FB7193A210D00934456 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF9E8FBD193A210D00934456 /* TestModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9E8FBE193A210D00934456 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,6 +53,8 @@
 		CF9E8FC8193A210D00934456 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF9E8FCA193A210D00934456 /* TestModuleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModuleTests.m; sourceTree = "<group>"; };
 		CF9E8FD6193A28A800934456 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CF9E8FD8193A343B00934456 /* KTFacebookPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTFacebookPhotosViewController.h; sourceTree = "<group>"; };
+		CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTFacebookPhotosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +119,8 @@
 				CF9E8FAB193A210D00934456 /* KTAppDelegate.h */,
 				CF9E8FAC193A210D00934456 /* KTAppDelegate.m */,
 				CF9E8FAE193A210D00934456 /* Main.storyboard */,
-				CF9E8FB1193A210D00934456 /* KTFirstViewController.h */,
-				CF9E8FB2193A210D00934456 /* KTFirstViewController.m */,
-				CF9E8FB4193A210D00934456 /* KTSecondViewController.h */,
-				CF9E8FB5193A210D00934456 /* KTSecondViewController.m */,
+				CF9E8FDB193A344D00934456 /* Controllers */,
+				CF9E8FDC193A346600934456 /* Views */,
 				CF9E8FB7193A210D00934456 /* Images.xcassets */,
 				CF9E8FA3193A210D00934456 /* Supporting Files */,
 			);
@@ -159,6 +154,22 @@
 				CF9E8FC7193A210D00934456 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF9E8FDB193A344D00934456 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E8FD8193A343B00934456 /* KTFacebookPhotosViewController.h */,
+				CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CF9E8FDC193A346600934456 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF9E8FB3193A210D00934456 /* KTFirstViewController.m in Sources */,
-				CF9E8FB6193A210D00934456 /* KTSecondViewController.m in Sources */,
 				CF9E8FA9193A210D00934456 /* main.m in Sources */,
+				CF9E8FDA193A343B00934456 /* KTFacebookPhotosViewController.m in Sources */,
 				CF9E8FAD193A210D00934456 /* KTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
