@@ -7,6 +7,7 @@
 //
 
 #import "KTMapsViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface KTMapsViewController ()
 
@@ -24,11 +25,26 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    _mapView.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Core location
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+
+}
+
+#pragma mark - Map View delegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    // If it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    return nil;
+}
 
 @end
