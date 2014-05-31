@@ -29,7 +29,7 @@
     [self.view addGestureRecognizer:singleTap];
 }
 
--(IBAction) handleTapGesture:(UIGestureRecognizer *) sender {
+-(void) handleTapGesture:(UIGestureRecognizer *) sender {
     CGPoint tapPoint = [sender locationInView:self.view];
     KTDraggableStar *star = [[KTDraggableStar alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [star setCenter:tapPoint];

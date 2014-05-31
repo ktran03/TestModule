@@ -40,6 +40,7 @@
 		CF9E906F193A4F6600934456 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9060193A4F6600934456 /* UIImageView+WebCache.m */; };
 		CF9E9073193A517000934456 /* KTDraggableStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9072193A517000934456 /* KTDraggableStarViewController.m */; };
 		CF9E9077193A51FC00934456 /* KTDraggableStar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9076193A51FC00934456 /* KTDraggableStar.m */; };
+		CF9E907A193A581700934456 /* KTMapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9079193A581700934456 /* KTMapsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		CF9E9072193A517000934456 /* KTDraggableStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDraggableStarViewController.m; sourceTree = "<group>"; };
 		CF9E9075193A51FC00934456 /* KTDraggableStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDraggableStar.h; sourceTree = "<group>"; };
 		CF9E9076193A51FC00934456 /* KTDraggableStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDraggableStar.m; sourceTree = "<group>"; };
+		CF9E9078193A581700934456 /* KTMapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTMapsViewController.h; sourceTree = "<group>"; };
+		CF9E9079193A581700934456 /* KTMapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMapsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */,
 				CF9E9071193A517000934456 /* KTDraggableStarViewController.h */,
 				CF9E9072193A517000934456 /* KTDraggableStarViewController.m */,
+				CF9E9078193A581700934456 /* KTMapsViewController.h */,
+				CF9E9079193A581700934456 /* KTMapsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				CF9E9062193A4F6600934456 /* NSData+ImageContentType.m in Sources */,
 				CF9E8FE0193A4C5E00934456 /* KTCollectionViewImageCell.m in Sources */,
 				CF9E9068193A4F6600934456 /* SDWebImageManager.m in Sources */,
+				CF9E907A193A581700934456 /* KTMapsViewController.m in Sources */,
 				CF9E9065193A4F6600934456 /* SDWebImageDecoder.m in Sources */,
 				CF9E9077193A51FC00934456 /* KTDraggableStar.m in Sources */,
 				CF9E9063193A4F6600934456 /* SDImageCache.m in Sources */,

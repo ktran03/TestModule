@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
         </scene>
-        <!--View Controller - Maps Feature-->
+        <!--Maps View Controller - Maps Feature-->
         <scene sceneID="f5U-kI-nmU">
             <objects>
-                <viewController id="rZH-bi-CR6" sceneMemberID="viewController">
+                <viewController id="rZH-bi-CR6" customClass="KTMapsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zIj-a2-hqF"/>
                         <viewControllerLayoutGuide type="bottom" id="lEm-o5-51w"/>
@@ -100,9 +100,21 @@
                     <view key="view" contentMode="scaleToFill" id="Tc2-fy-cIB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-eG-eEk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rZH-bi-CR6" id="gXK-xZ-8TX"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maps Feature" image="second" id="gwQ-8a-AIM"/>
+                    <connections>
+                        <outlet property="mapView" destination="U0r-eG-eEk" id="CtY-Pr-GFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYj-iV-16t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
