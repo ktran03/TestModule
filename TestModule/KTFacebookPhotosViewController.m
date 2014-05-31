@@ -12,7 +12,10 @@
 
 @end
 
-@implementation KTFacebookPhotosViewController
+@implementation KTFacebookPhotosViewController{
+    NSMutableArray *_thumbnailImagesURLs;
+    NSMutableArray *_imagesURLs;
+}
 
 #pragma mark - VC init & lifecycle
 
@@ -20,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+
     }
     return self;
 }
@@ -33,6 +36,10 @@
     loginView.delegate = self;
     [loginView setCenter:self.view.center];
     [self.view addSubview:loginView];
+    
+    _thumbnailImagesURLs = [[NSMutableArray alloc] init];
+    _imagesURLs = [[NSMutableArray alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,16 +50,18 @@
 #pragma mark - FB SDK methods
 
 -(void)getUserPhotos{
-    [FBRequestConnection startWithGraphPath:@"/me/photos/uploaded"
-                                 parameters:nil
-                                 HTTPMethod:@"GET"
-                          completionHandler:^(
-                                              FBRequestConnection *connection,
-                                              id result,
-                                              NSError *error
-                                              ) {
-
-                          }];
+    [FBRequestConnection startWithGraphPath:@"/me/photos/uploaded" parameters:nil HTTPMethod:@"GET"
+                          completionHandler:^(FBRequestConnection *connection, id result, NSError *error){
+                              
+                              NSArray *dataArray = [result valueForKey:@"data"];
+                              [dataArray enumerateObjectsUsingBlock:^(FBGraphObject *imageObj, NSUInteger idx, BOOL *stop) {
+                                  NSURL *thumbnailURL = [NSURL URLWithString:[imageObj valueForKey:@"picture"]];
+                                  [_thumbnailImagesURLs addObject:thumbnailURL];
+                                  
+                                  NSURL *imageURL = [NSURL URLWithString:[imageObj valueForKey:@"source"]];
+                                  [_imagesURLs addObject:imageURL];
+                              }];
+    }];
 }
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
