@@ -38,6 +38,8 @@
 		CF9E906D193A4F6600934456 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E905C193A4F6600934456 /* UIImage+WebP.m */; };
 		CF9E906E193A4F6600934456 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E905E193A4F6600934456 /* UIImageView+HighlightedWebCache.m */; };
 		CF9E906F193A4F6600934456 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9060193A4F6600934456 /* UIImageView+WebCache.m */; };
+		CF9E9073193A517000934456 /* KTDraggableStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9072193A517000934456 /* KTDraggableStarViewController.m */; };
+		CF9E9077193A51FC00934456 /* KTDraggableStar.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E9076193A51FC00934456 /* KTDraggableStar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,10 @@
 		CF9E905E193A4F6600934456 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		CF9E905F193A4F6600934456 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		CF9E9060193A4F6600934456 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		CF9E9071193A517000934456 /* KTDraggableStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDraggableStarViewController.h; sourceTree = "<group>"; };
+		CF9E9072193A517000934456 /* KTDraggableStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDraggableStarViewController.m; sourceTree = "<group>"; };
+		CF9E9075193A51FC00934456 /* KTDraggableStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTDraggableStar.h; sourceTree = "<group>"; };
+		CF9E9076193A51FC00934456 /* KTDraggableStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTDraggableStar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +168,6 @@
 		CF9E8FA2193A210D00934456 /* TestModule */ = {
 			isa = PBXGroup;
 			children = (
-				CF9E9041193A4F6600934456 /* SDWebImage */,
 				CF9E8FAB193A210D00934456 /* KTAppDelegate.h */,
 				CF9E8FAC193A210D00934456 /* KTAppDelegate.m */,
 				CF9E8FAE193A210D00934456 /* Main.storyboard */,
@@ -206,8 +211,11 @@
 		CF9E8FDB193A344D00934456 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF9E9074193A51C700934456 /* Custom */,
 				CF9E8FD8193A343B00934456 /* KTFacebookPhotosViewController.h */,
 				CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */,
+				CF9E9071193A517000934456 /* KTDraggableStarViewController.h */,
+				CF9E9072193A517000934456 /* KTDraggableStarViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 		CF9E8FE2193A4EB600934456 /* Folders */ = {
 			isa = PBXGroup;
 			children = (
+				CF9E9041193A4F6600934456 /* SDWebImage */,
 			);
 			name = Folders;
 			sourceTree = "<group>";
@@ -283,7 +292,17 @@
 				CF9E905F193A4F6600934456 /* UIImageView+WebCache.h */,
 				CF9E9060193A4F6600934456 /* UIImageView+WebCache.m */,
 			);
-			path = SDWebImage;
+			name = SDWebImage;
+			path = TestModule/SDWebImage;
+			sourceTree = "<group>";
+		};
+		CF9E9074193A51C700934456 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				CF9E9075193A51FC00934456 /* KTDraggableStar.h */,
+				CF9E9076193A51FC00934456 /* KTDraggableStar.m */,
+			);
+			name = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +406,7 @@
 				CF9E906E193A4F6600934456 /* UIImageView+HighlightedWebCache.m in Sources */,
 				CF9E906C193A4F6600934456 /* UIImage+MultiFormat.m in Sources */,
 				CF9E9067193A4F6600934456 /* SDWebImageDownloaderOperation.m in Sources */,
+				CF9E9073193A517000934456 /* KTDraggableStarViewController.m in Sources */,
 				CF9E8FA9193A210D00934456 /* main.m in Sources */,
 				CF9E9064193A4F6600934456 /* SDWebImageCompat.m in Sources */,
 				CF9E906B193A4F6600934456 /* UIImage+GIF.m in Sources */,
@@ -402,6 +422,7 @@
 				CF9E8FE0193A4C5E00934456 /* KTCollectionViewImageCell.m in Sources */,
 				CF9E9068193A4F6600934456 /* SDWebImageManager.m in Sources */,
 				CF9E9065193A4F6600934456 /* SDWebImageDecoder.m in Sources */,
+				CF9E9077193A51FC00934456 /* KTDraggableStar.m in Sources */,
 				CF9E9063193A4F6600934456 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
