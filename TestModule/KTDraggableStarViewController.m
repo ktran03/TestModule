@@ -7,6 +7,7 @@
 //
 
 #import "KTDraggableStarViewController.h"
+#import "KTDraggableStar.h"
 
 @interface KTDraggableStarViewController ()
 
@@ -14,22 +15,28 @@
 
 @implementation KTDraggableStarViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [singleTap setNumberOfTapsRequired:1];
+    [self.view addGestureRecognizer:singleTap];
 }
 
-- (void)didReceiveMemoryWarning
-{
+-(IBAction) handleTapGesture:(UIGestureRecognizer *) sender {
+    CGPoint tapPoint = [sender locationInView:self.view];
+    KTDraggableStar *star = [[KTDraggableStar alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [star setCenter:tapPoint];
+    [self.view addSubview:star];
+}
+
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
