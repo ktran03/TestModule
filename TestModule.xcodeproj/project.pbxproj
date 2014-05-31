@@ -22,6 +22,7 @@
 		CF9E8FC1193A210D00934456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8FA0193A210D00934456 /* UIKit.framework */; };
 		CF9E8FC9193A210D00934456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF9E8FC7193A210D00934456 /* InfoPlist.strings */; };
 		CF9E8FCB193A210D00934456 /* TestModuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF9E8FCA193A210D00934456 /* TestModuleTests.m */; };
+		CF9E8FD7193A28A800934456 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8FD6193A28A800934456 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		CF9E8FC6193A210D00934456 /* TestModuleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestModuleTests-Info.plist"; sourceTree = "<group>"; };
 		CF9E8FC8193A210D00934456 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF9E8FCA193A210D00934456 /* TestModuleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModuleTests.m; sourceTree = "<group>"; };
+		CF9E8FD6193A28A800934456 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF9E8F9F193A210D00934456 /* CoreGraphics.framework in Frameworks */,
+				CF9E8FD7193A28A800934456 /* FacebookSDK.framework in Frameworks */,
 				CF9E8FA1193A210D00934456 /* UIKit.framework in Frameworks */,
 				CF9E8F9D193A210D00934456 /* Foundation.framework in Frameworks */,
 			);
@@ -104,6 +107,7 @@
 		CF9E8F9B193A210D00934456 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF9E8FD6193A28A800934456 /* FacebookSDK.framework */,
 				CF9E8F9C193A210D00934456 /* Foundation.framework */,
 				CF9E8F9E193A210D00934456 /* CoreGraphics.framework */,
 				CF9E8FA0193A210D00934456 /* UIKit.framework */,
@@ -383,6 +387,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestModule/TestModule-Prefix.pch";
 				INFOPLIST_FILE = "TestModule/TestModule-Info.plist";
@@ -396,6 +404,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestModule/TestModule-Prefix.pch";
 				INFOPLIST_FILE = "TestModule/TestModule-Info.plist";
@@ -463,6 +475,7 @@
 				CF9E8FD0193A210D00934456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF9E8FD1193A210D00934456 /* Build configuration list for PBXNativeTarget "TestModuleTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +484,7 @@
 				CF9E8FD3193A210D00934456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
