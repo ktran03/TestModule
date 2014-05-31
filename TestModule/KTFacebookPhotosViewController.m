@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:
-     @[@"public_profile"]];
+     @[@"public_profile", @"user_photos"]];
     loginView.delegate = self;
     [loginView setCenter:self.view.center];
     [self.view addSubview:loginView];
@@ -40,16 +40,29 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - FB delegate methods
+#pragma mark - FB SDK methods
+
+-(void)getUserPhotos{
+    [FBRequestConnection startWithGraphPath:@"/me/photos/uploaded"
+                                 parameters:nil
+                                 HTTPMethod:@"GET"
+                          completionHandler:^(
+                                              FBRequestConnection *connection,
+                                              id result,
+                                              NSError *error
+                                              ) {
+
+                          }];
+}
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
-    
+    [self getUserPhotos];
 }
 
 // Logged-in user
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-
+    [self getUserPhotos];
 }
 
 // Logged-out user
