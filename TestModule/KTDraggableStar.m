@@ -15,6 +15,7 @@
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -41,13 +42,19 @@
 
 - (void)drawRect:(CGRect)rect{
     [super drawRect:rect];
+    
+    CGRect frame = self.frame;
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [[UIColor orangeColor] set];
-    CGContextSetLineWidth(context,5.0f);
-    CGContextMoveToPoint(context,self.frame.origin.x,self.frame.origin.y);
-    CGContextAddLineToPoint(context,self.frame.size.width, 0);
-    CGContextSetShadowWithColor(context, CGSizeMake(0, 0), 0, [UIColor grayColor].CGColor);
-    CGContextStrokePath(context);
+    [[UIColor yellowColor] set];
+    
+    CGContextMoveToPoint(context,0,frame.size.height);
+    CGContextAddLineToPoint(context,frame.size.width/2, 0);
+    CGContextAddLineToPoint(context,frame.size.width, frame.size.height);
+    CGContextAddLineToPoint(context,0, frame.size.height/3.0);
+    CGContextAddLineToPoint(context,frame.size.width, frame.size.height/3.0);
+    CGContextAddLineToPoint(context,0, frame.size.height);
+    CGContextFillPath(context);
+    
 }
 
  

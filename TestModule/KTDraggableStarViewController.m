@@ -31,7 +31,7 @@
 
 -(void) handleTapGesture:(UIGestureRecognizer *) sender {
     CGPoint tapPoint = [sender locationInView:self.view];
-    KTDraggableStar *star = [[KTDraggableStar alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    KTDraggableStar *star = [[KTDraggableStar alloc] initWithFrame:CGRectMake(0, 0, 50, 55)];
     [star setCenter:tapPoint];
     [self.view addSubview:star];
 }
