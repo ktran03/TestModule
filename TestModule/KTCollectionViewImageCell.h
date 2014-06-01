@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+-(void)configureCellWithImageURL:(NSURL*)url;
+
 @end
