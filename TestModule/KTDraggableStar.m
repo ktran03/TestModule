@@ -11,7 +11,6 @@
 @implementation KTDraggableStar
 
 #pragma mark - Init and lifecycle
-
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
@@ -21,7 +20,6 @@
 }
 
 #pragma mark - UIControl Methods
-
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super beginTrackingWithTouch:touch withEvent:event];
     return YES;
@@ -39,7 +37,6 @@
 }
 
 #pragma mark - Draw methods
-
 - (void)drawRect:(CGRect)rect{
     [super drawRect:rect];
     

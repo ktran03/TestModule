@@ -15,6 +15,7 @@
 
 @implementation KTDraggableStarViewController
 
+#pragma mark - VC init & lifecycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -29,15 +30,15 @@
     [self.view addGestureRecognizer:singleTap];
 }
 
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
+
 -(void) handleTapGesture:(UIGestureRecognizer *) sender {
     CGPoint tapPoint = [sender locationInView:self.view];
     KTDraggableStar *star = [[KTDraggableStar alloc] initWithFrame:CGRectMake(0, 0, 50, 55)];
     [star setCenter:tapPoint];
     [self.view addSubview:star];
-}
-
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
 }
 
 @end

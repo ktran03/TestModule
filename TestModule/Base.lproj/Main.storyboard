@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="weK-MO-OMb">
-                                <rect key="frame" x="0.0" y="78" width="320" height="362"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="weK-MO-OMb">
+                                <rect key="frame" x="0.0" y="76" width="320" height="364"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Hj-4x-Ky6">
@@ -53,17 +53,25 @@
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="WwN-Iz-f6X"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lao-bM-Dtn" customClass="FBLoginView">
-                                <rect key="frame" x="24" y="456" width="273" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lao-bM-Dtn" customClass="FBLoginView">
+                                <rect key="frame" x="24" y="454" width="273" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aj7-92-Stq"/>
+                                    <constraint firstAttribute="width" constant="273" id="b4c-xz-pa9"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="nNR-v0-r41"/>
                                 </connections>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-LV-pLH">
-                                <rect key="frame" x="160" y="40" width="0.0" height="0.0"/>
+                                <rect key="frame" x="22" y="20" width="277" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="IIh-Su-geB"/>
+                                    <constraint firstAttribute="width" constant="277" id="aZS-ha-6gT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.17254901960784313" green="0.2627450980392157" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -71,8 +79,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ACn-LV-pLH" firstAttribute="top" secondItem="2VE-Yg-loa" secondAttribute="top" constant="40" id="2Kd-nY-bio"/>
-                            <constraint firstAttribute="centerX" secondItem="ACn-LV-pLH" secondAttribute="centerX" id="4as-Lc-A6N"/>
+                            <constraint firstAttribute="centerX" secondItem="Lao-bM-Dtn" secondAttribute="centerX" id="52w-d2-HnF"/>
+                            <constraint firstItem="weK-MO-OMb" firstAttribute="top" secondItem="ACn-LV-pLH" secondAttribute="bottom" constant="20" id="AWP-4z-DRq"/>
+                            <constraint firstItem="Lao-bM-Dtn" firstAttribute="top" secondItem="weK-MO-OMb" secondAttribute="bottom" constant="14" id="GpA-FT-Pzy"/>
+                            <constraint firstAttribute="trailing" secondItem="weK-MO-OMb" secondAttribute="trailing" id="SQa-fP-7Xc"/>
+                            <constraint firstItem="ACn-LV-pLH" firstAttribute="top" secondItem="s9W-kb-ARv" secondAttribute="bottom" id="byD-td-o87"/>
+                            <constraint firstAttribute="centerX" secondItem="ACn-LV-pLH" secondAttribute="centerX" id="eDh-M2-bLB"/>
+                            <constraint firstItem="weK-MO-OMb" firstAttribute="leading" secondItem="2VE-Yg-loa" secondAttribute="leading" id="ktf-Bs-Vny"/>
+                            <constraint firstAttribute="bottom" secondItem="Lao-bM-Dtn" secondAttribute="bottom" constant="64" id="yqA-pD-LNi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Facebook Photos" image="first" id="u1e-5L-l1D"/>
@@ -98,14 +112,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to see draggable stars...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93J-NE-upM">
-                                <rect key="frame" x="43" y="109" width="235" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to see draggable stars...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93J-NE-upM">
+                                <rect key="frame" x="49" y="110" width="223" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="93J-NE-upM" secondAttribute="centerX" id="2xS-2f-bO7"/>
+                            <constraint firstItem="93J-NE-upM" firstAttribute="top" secondItem="FgS-U6-xeU" secondAttribute="bottom" constant="90" id="MCj-eE-j3R"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Draggable Star" image="second" id="Z7h-1E-pvt"/>
                 </viewController>
@@ -125,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-eG-eEk">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-eG-eEk">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
@@ -134,6 +152,12 @@
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="U0r-eG-eEk" secondAttribute="bottom" id="7ib-Ek-xvu"/>
+                            <constraint firstAttribute="trailing" secondItem="U0r-eG-eEk" secondAttribute="trailing" id="B14-5K-ydh"/>
+                            <constraint firstItem="U0r-eG-eEk" firstAttribute="top" secondItem="Tc2-fy-cIB" secondAttribute="top" id="DrY-1C-mUu"/>
+                            <constraint firstItem="U0r-eG-eEk" firstAttribute="leading" secondItem="Tc2-fy-cIB" secondAttribute="leading" id="uyf-oR-sGW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Maps Feature" image="second" id="gwQ-8a-AIM"/>
                     <connections>

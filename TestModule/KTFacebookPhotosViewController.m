@@ -18,7 +18,6 @@
 }
 
 #pragma mark - VC init & lifecycle
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -39,7 +38,6 @@
 }
 
 #pragma mark - CollectionView Delegate methods
-
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"ImageCell";
     KTCollectionViewImageCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
@@ -57,7 +55,6 @@
 }
 
 #pragma mark - FB SDK methods
-
 -(void)getUserPhotos{
     _thumbnailImagesURLs = [[NSMutableArray alloc] init];
     [FBRequestConnection startWithGraphPath:@"/me/photos/uploaded" parameters:nil HTTPMethod:@"GET"
