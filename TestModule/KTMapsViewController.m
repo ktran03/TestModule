@@ -14,10 +14,10 @@
 #define KEY_SEARCH_TERM @"restaurant";
 
 @interface KTMapsViewController ()
-
 @end
 
 @implementation KTMapsViewController
+@synthesize currentLocation = _currentLocation;
 
 #pragma mark - VC init & life cycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -40,19 +40,19 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)setCurrentLocation:(CLLocation *)currentLocation{
+    _currentLocation = currentLocation;
+    MKCoordinateRegion locationRegion = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate, ZOOM_LEVEL, ZOOM_LEVEL);
+    MKCoordinateRegion zoomedRegion = [_mapView regionThatFits:locationRegion];
+    [_mapView setRegion:zoomedRegion animated:YES];
+    [self findNearbyLocationsInRegion:zoomedRegion];
+}
+
 #pragma mark - Core location
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-
-    //Questionable implementation,
-    static dispatch_once_t once;
-    dispatch_once(&once, ^{
-        CLLocation *location = [locations lastObject];
-        MKCoordinateRegion locationRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, ZOOM_LEVEL, ZOOM_LEVEL);
-        MKCoordinateRegion zoomedRegion = [_mapView regionThatFits:locationRegion];
-        [_mapView setRegion:zoomedRegion animated:YES];
-        [self findNearbyLocationsInRegion:zoomedRegion];
-    });
-    
+    if (_currentLocation == nil) {
+        [self setCurrentLocation:[locations lastObject]];
+    }
 }
 
 #pragma mark - Map View helper
