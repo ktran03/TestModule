@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4B4340193AB38600CF907E /* KTPlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4B433F193AB38600CF907E /* KTPlaceMark.m */; };
 		CF9E8F9D193A210D00934456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8F9C193A210D00934456 /* Foundation.framework */; };
 		CF9E8F9F193A210D00934456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8F9E193A210D00934456 /* CoreGraphics.framework */; };
 		CF9E8FA1193A210D00934456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9E8FA0193A210D00934456 /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF4B433E193AB38600CF907E /* KTPlaceMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPlaceMark.h; sourceTree = "<group>"; };
+		CF4B433F193AB38600CF907E /* KTPlaceMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPlaceMark.m; sourceTree = "<group>"; };
 		CF9E8F99193A210D00934456 /* TestModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9E8F9C193A210D00934456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF9E8F9E193A210D00934456 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -221,6 +224,8 @@
 				CF9E9072193A517000934456 /* KTDraggableStarViewController.m */,
 				CF9E9078193A581700934456 /* KTMapsViewController.h */,
 				CF9E9079193A581700934456 /* KTMapsViewController.m */,
+				CF4B433E193AB38600CF907E /* KTPlaceMark.h */,
+				CF4B433F193AB38600CF907E /* KTPlaceMark.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				CF9E9065193A4F6600934456 /* SDWebImageDecoder.m in Sources */,
 				CF9E9077193A51FC00934456 /* KTDraggableStar.m in Sources */,
 				CF9E9063193A4F6600934456 /* SDImageCache.m in Sources */,
+				CF4B4340193AB38600CF907E /* KTPlaceMark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

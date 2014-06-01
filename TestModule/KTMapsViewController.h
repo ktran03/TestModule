@@ -10,8 +10,11 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface KTMapsViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
+@interface KTMapsViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>{
+    CLLocationManager *_locationManager;
+}
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
