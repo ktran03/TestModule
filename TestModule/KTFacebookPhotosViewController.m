@@ -16,7 +16,6 @@
 
 @implementation KTFacebookPhotosViewController{
     NSMutableArray *_thumbnailImagesURLs;
-    NSMutableArray *_imagesURLs;
 }
 
 #pragma mark - VC init & lifecycle
@@ -25,11 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _fbLoginView.readPermissions = @[@"public_profile", @"user_photos"];
-        _fbLoginView.delegate = self;
-        
         _thumbnailImagesURLs = [[NSMutableArray alloc] init];
-        _imagesURLs = [[NSMutableArray alloc] init];
-        
         [_collectionView setDelegate:self];
         [_collectionView setDataSource:self];
     }
@@ -55,7 +50,7 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [_imagesURLs count];
+    return [_thumbnailImagesURLs count];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -66,7 +61,6 @@
 
 -(void)getUserPhotos{
     _thumbnailImagesURLs = [[NSMutableArray alloc] init];
-    _imagesURLs = [[NSMutableArray alloc] init];
     [FBRequestConnection startWithGraphPath:@"/me/photos/uploaded" parameters:nil HTTPMethod:@"GET"
                           completionHandler:^(FBRequestConnection *connection, id result, NSError *error){
                               
@@ -74,9 +68,7 @@
                               [dataArray enumerateObjectsUsingBlock:^(FBGraphObject *imageObj, NSUInteger idx, BOOL *stop) {
                                   NSURL *thumbnailURL = [NSURL URLWithString:[imageObj valueForKey:@"picture"]];
                                   [_thumbnailImagesURLs addObject:thumbnailURL];
-                                  
-                                  NSURL *imageURL = [NSURL URLWithString:[imageObj valueForKey:@"source"]];
-                                  [_imagesURLs addObject:imageURL];
+
                               }];
                               
                               [_collectionView reloadData];
@@ -87,15 +79,14 @@
                             user:(id<FBGraphUser>)user {
     NSString *helloString = [NSString stringWithFormat:@"Hi %@!", [user objectForKey:@"first_name"]];
     [_helloLabel setText:helloString];
-    [self getUserPhotos];
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    [self getUserPhotos];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     _thumbnailImagesURLs = nil;
-    _imagesURLs = nil;
     [_helloLabel setText:@"Login to see your pictures"];
     [_collectionView reloadData];
 }

@@ -64,13 +64,13 @@
     MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
     [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
         
-        NSMutableArray *placemarks = [NSMutableArray new];
+        NSMutableArray *annotations = [NSMutableArray new];
         [response.mapItems enumerateObjectsUsingBlock:^(MKMapItem *item, NSUInteger idx, BOOL *stop) {
             KTPlaceMark *placemark = [[KTPlaceMark alloc] initWithPlacemark:item.placemark];
-            [placemarks addObject:placemark];
+            [annotations addObject:placemark];
         }];
         
-        [_mapView addAnnotations:placemarks];
+        [_mapView addAnnotations:annotations];
         
     }];
 }
