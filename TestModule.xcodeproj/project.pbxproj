@@ -143,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1D1BD5193B9A3200D97631 /* Placemarks */ = {
+			isa = PBXGroup;
+			children = (
+				CF4B433E193AB38600CF907E /* KTPlaceMark.h */,
+				CF4B433F193AB38600CF907E /* KTPlaceMark.m */,
+			);
+			name = Placemarks;
+			sourceTree = "<group>";
+		};
 		CF9E8F90193A210D00934456 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +188,8 @@
 				CF9E8FAE193A210D00934456 /* Main.storyboard */,
 				CF9E8FDB193A344D00934456 /* Controllers */,
 				CF9E8FDC193A346600934456 /* Views */,
+				CF9E9074193A51C700934456 /* Draggable Star */,
+				CF1D1BD5193B9A3200D97631 /* Placemarks */,
 				CF9E8FB7193A210D00934456 /* Images.xcassets */,
 				CF9E8FA3193A210D00934456 /* Supporting Files */,
 			);
@@ -217,15 +228,12 @@
 		CF9E8FDB193A344D00934456 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF9E9074193A51C700934456 /* Custom */,
 				CF9E8FD8193A343B00934456 /* KTFacebookPhotosViewController.h */,
 				CF9E8FD9193A343B00934456 /* KTFacebookPhotosViewController.m */,
 				CF9E9071193A517000934456 /* KTDraggableStarViewController.h */,
 				CF9E9072193A517000934456 /* KTDraggableStarViewController.m */,
 				CF9E9078193A581700934456 /* KTMapsViewController.h */,
 				CF9E9079193A581700934456 /* KTMapsViewController.m */,
-				CF4B433E193AB38600CF907E /* KTPlaceMark.h */,
-				CF4B433F193AB38600CF907E /* KTPlaceMark.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -306,13 +314,13 @@
 			path = TestModule/SDWebImage;
 			sourceTree = "<group>";
 		};
-		CF9E9074193A51C700934456 /* Custom */ = {
+		CF9E9074193A51C700934456 /* Draggable Star */ = {
 			isa = PBXGroup;
 			children = (
 				CF9E9075193A51FC00934456 /* KTDraggableStar.h */,
 				CF9E9076193A51FC00934456 /* KTDraggableStar.m */,
 			);
-			name = Custom;
+			name = "Draggable Star";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

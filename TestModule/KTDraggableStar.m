@@ -34,11 +34,11 @@
     return YES;
 }
 
-#pragma mark - Draw methods
-
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super endTrackingWithTouch:touch withEvent:event];
 }
+
+#pragma mark - Draw methods
 
 - (void)drawRect:(CGRect)rect{
     [super drawRect:rect];

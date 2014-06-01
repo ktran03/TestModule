@@ -10,6 +10,4 @@
 
 @interface KTPlaceMark : MKPlacemark
 
-@property (strong, nonatomic) NSString *phone;
-
 @end
