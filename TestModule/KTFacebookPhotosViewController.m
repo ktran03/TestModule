@@ -9,6 +9,9 @@
 #import "KTFacebookPhotosViewController.h"
 #import "KTCollectionViewImageCell.h"
 
+//Setting an upper limit on displayable photos. Users may have thousands (or 10's of thousands!), and in that case, may be better to use folders or some sort of hierachy.
+#define MAX_DISPLAYABLE_IMAGES 100
+
 @interface KTFacebookPhotosViewController ()
 
 @end
@@ -62,6 +65,9 @@
                               
                               NSArray *dataArray = [result valueForKey:@"data"];
                               [dataArray enumerateObjectsUsingBlock:^(FBGraphObject *imageObj, NSUInteger idx, BOOL *stop) {
+                                  if ([_thumbnailImagesURLs count] >= MAX_DISPLAYABLE_IMAGES) {
+                                      *stop = YES;
+                                  }
                                   NSURL *thumbnailURL = [NSURL URLWithString:[imageObj valueForKey:@"picture"]];
                                   [_thumbnailImagesURLs addObject:thumbnailURL];
 

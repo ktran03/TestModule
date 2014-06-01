@@ -29,7 +29,11 @@
 }
 
 -(void)configureCellWithImageURL:(NSURL*)url{
-    [_imageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    if (url) {
+        [_imageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    }else{
+        [_imageView setImage:[UIImage imageNamed:@"placeholder"]];
+    }
 }
 
 @end
