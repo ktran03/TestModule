@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- *  Questionable usage of UIControl. My justification is that the Star is indeed a control, simply because it recieves user input and acts upon it. Another way to look at it is the star is a view. In that case, we can get touch events based using UIGestureRecognizer (pan gesture). UIControl seems like a cleaner implementation.
+ *  Questionable usage of UIControl. My justification is that the Star is indeed a control, simply because it receives user input and acts upon it. Another way to look at it is the star is a view. In that case, we can get touch events based using UIGestureRecognizer (pan gesture). UIControl seems like a cleaner implementation.
  
      From Apple Docs:
      
